@@ -6,60 +6,80 @@ namespace OOP_Labb2_Arv
 {
     public abstract class Animal
     {
-        protected string _Name = "NoName";
-        protected string _Color = "NoColor";
-        protected string _Environment = "NoEnvironment";
-        protected int _LegAmount = 4;
-        protected string _Nature = "NoNature";
-        protected string _Food = "NoFood";
+        protected string _name = "NoName";
+        protected string _color = "NoColor";
+        protected string _environment = "NoEnvironment";
+        protected int _legAmount = 0;
+        protected string _nature = "NoNature";
+        protected string _food = "NoFood";
+
+        //Accessor for name
+        public string name { get => _name; }
 
         public Animal()
         {
 
         }
         public Animal(string name, string color, string environment,
-            string nature, string food)
+            int legAmount, string nature, string food)
         {
-            _Name = name;
-            _Color = color;
-            _Environment = environment;
-            _Nature = nature;
-            _Food = food;
+            _name = name;
+            _color = color;
+            _environment = environment;
+            _legAmount = legAmount;
+            _nature = nature;
+            _food = food;
         }
 
         public virtual void PrintInfo()
         { 
-            Console.WriteLine($"{_Name} is {_Color} and lives in " +
-                $"{_Environment}.\nIt has {_LegAmount} legs and eats {_Food}." +
-                $"\n{_Name} is {_Nature} in it's nature.");
+            Console.Write($"{_name} is {_color} and lives in " +
+                $"{_environment}.\nIt has {_legAmount} legs and eats {_food}." +
+                $"\n{_name} is {_nature} in it's nature. \n");
         }
+
+        public virtual void MakeSound()
+        {
+            Console.WriteLine("What does this animal sound like?");
+        }
+
         public virtual void Eat()
         {
-            Console.WriteLine($"{_Name} eats {_Food}.");
+            Console.WriteLine($"{_name} eats {_food}.");
         }
 
-        public virtual void Sleep()
+        public void Sleep()
         {
-            Console.WriteLine($"The animal sleeps in {_Environment}");
+            Console.WriteLine($"The animal sleeps in {_environment}");
         }
 
-        public virtual void Walk()
+        public void Walk()
         {
-            if (_LegAmount < 2)
+            if (_legAmount < 2)
+            {
                 Console.WriteLine("The animal can't walk.");
+            }
             else
+            {
                 Console.WriteLine($"The animal takes a stroll on its " +
-                    $"{_LegAmount} legs.");
+                    $"{_legAmount} legs.");
+            }
         }
 
         public void Pet()
         {
-            if (_Nature == "Calm")
+            if (_nature.ToLower() == "calm")
+            {
                 Console.WriteLine("You can pet this animal.");
-            else if (_Nature == "Aggressive")
+            }
+            else if (_nature.ToLower() == "aggressive")
+            {
                 Console.WriteLine("Keep your distance!");
+            }
             else
+            {
                 Console.WriteLine("Pet at your own risk.");
+            }
         }
     }
 }
