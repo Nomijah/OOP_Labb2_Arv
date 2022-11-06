@@ -32,5 +32,26 @@ namespace OOP_Labb2_Arv
             Console.WriteLine("The horse neighs!");
         }
 
+        public void Race()
+        {
+            Random rnd = new Random();
+            int chance = rnd.Next(0, 7);
+            switch (chance)
+            {
+                case 0:
+                    Console.WriteLine($"{_name} wins the race!");
+                    break;
+                case 1:
+                    Console.WriteLine($"{_name} came in second place, " +
+                        $"so close!");
+                    break;
+                case 6:
+                    Console.WriteLine($"{_name} came in last place, too bad!");
+                    break;
+                default:
+                    Console.WriteLine($"{_name} didn't win.");
+                    break;
+            }
+        }
     }
 }

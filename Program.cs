@@ -14,9 +14,22 @@ namespace OOP_Labb2_Arv
             Mouse mouse2 = new Mouse("Jack", "grey", "the forest", 4, "wild", "nuts", "skinny");
             Mouse mouse3 = new Mouse("Francis", "white", "a cage", 4, "tame", "goose liver", "weird");
 
-           
+            horse1.MakeSound();
+            fox1.MakeSound();
+            hen1.MakeSound();
+            eagle1.MakeSound();
+            mouse1.MakeSound();
+            Console.WriteLine();
 
-            
+            fox1.Pet();
+            mouse3.Pet();
+            hen1.Pet();
+            Console.WriteLine();
+
+
+
+
+            Console.ReadKey();
         }
     }
 }
