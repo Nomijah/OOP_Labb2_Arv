@@ -36,6 +36,7 @@ namespace OOP_Labb2_Arv
         {
             Random rnd = new Random();
             int chance = rnd.Next(0, 7);
+            Console.WriteLine($"{_name} enters a race.");
             switch (chance)
             {
                 case 0:

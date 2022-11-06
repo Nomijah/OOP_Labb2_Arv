@@ -23,10 +23,6 @@ namespace OOP_Labb2_Arv
         {
             Console.Write("The eagle ");
             base.PrintInfo();
-            if (_canFly)
-                Console.WriteLine("It can fly.");
-            else
-                Console.WriteLine("It can't fly.");
             Console.WriteLine();
         }
         public override void MakeSound()
@@ -37,23 +33,25 @@ namespace OOP_Labb2_Arv
 
         public override void Eat()
         {
-            if (mouse.alive == true)
             {
-            Console.WriteLine($"The eagle eats {_food} and it has eaten" +
+            Console.WriteLine($"The eagle eats {_food} and it has eaten " +
                 $"{_miceAmount} mice in it's lifetime.");
-            }
-            else
-            {
-                Console.WriteLine("The eagle prefers to hunt its prey.");
             }
         }
 
         public void EatMouse(Mouse mouse)
         {
-            _miceAmount++;
+            if (mouse.alive == true)
+            {
+                _miceAmount++;
             Console.WriteLine($"{_name} eats {mouse.name} and it tastes " +
                 $"{mouse.taste}.");
             mouse.alive = false;
+            }
+            else
+            {
+                Console.WriteLine("The eagle prefers to hunt its prey.");
+            }
         }
 
         public override void Fly()

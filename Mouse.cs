@@ -22,6 +22,7 @@ namespace OOP_Labb2_Arv
             (name, color, environment, legAmount, nature, food)
         {
             _taste = taste;
+            _alive = true;
         }
 
         public override void PrintInfo()
@@ -34,7 +35,7 @@ namespace OOP_Labb2_Arv
 
         public override void MakeSound()
         {
-            Console.WriteLine("The mouse squeeks.");
+            Console.WriteLine("The mouse squeaks.");
         }
 
         public void CheckLifeSigns()

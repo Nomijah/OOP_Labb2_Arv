@@ -19,7 +19,6 @@ namespace OOP_Labb2_Arv
         }
         public override void PrintInfo()
         {
-            Console.Write("The bird ");
             base.PrintInfo();
             if (_canFly)
             {
@@ -29,7 +28,6 @@ namespace OOP_Labb2_Arv
             {
                 Console.WriteLine("It can't fly.");
             }
-            Console.WriteLine();
         }
 
         public override void MakeSound()

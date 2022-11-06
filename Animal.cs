@@ -50,7 +50,7 @@ namespace OOP_Labb2_Arv
 
         public void Sleep()
         {
-            Console.WriteLine($"The animal sleeps in {_environment}");
+            Console.WriteLine($"{_name} sleeps in {_environment}.");
         }
 
         public void Walk()

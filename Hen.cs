@@ -25,10 +25,7 @@ namespace OOP_Labb2_Arv
         {
             Console.Write("The hen ");
             base.PrintInfo();
-            if (_canFly)
-                Console.WriteLine("It can fly.");
-            else
-                Console.WriteLine("It can't fly.");
+            Console.WriteLine($"{_name} has laid {_eggsLaid} eggs.");
             Console.WriteLine();
         }
 
