@@ -33,5 +33,10 @@ namespace OOP_Labb2_Arv
                 "dingeringeding! Gering - ding - ding - ding - dingeringeding!" +
                 " Gering - ding - ding - ding - dingeringeding!\"");
         }
+
+        public void Sneak()
+        {
+            Console.WriteLine("The fox sneaks around the hen house.");
+        }
     }
 }
