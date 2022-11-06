@@ -29,7 +29,14 @@ namespace OOP_Labb2_Arv
                 Console.WriteLine("It can fly.");
             else
                 Console.WriteLine("It can't fly.");
+            Console.WriteLine();
         }
+
+        public override void MakeSound()
+        {
+            Console.WriteLine("The hen clucks.");
+        }
+
         public override void Fly()
         {
             if (_canFly)
@@ -44,6 +51,12 @@ namespace OOP_Labb2_Arv
             }
         }
 
+        public void LayEgg()
+        {
+            _eggsLaid++;
+            Console.WriteLine($"{_name} lays an egg and has now laid " +
+                $"{_eggsLaid} eggs in its lifetime.");
+        }
 
     }
 }

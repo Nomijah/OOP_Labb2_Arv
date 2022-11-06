@@ -25,6 +25,7 @@ namespace OOP_Labb2_Arv
             Console.Write("The fox ");
             base.PrintInfo();
             Console.WriteLine($"The fox's tail is {_tail}");
+            Console.WriteLine();
         }
         public override void MakeSound()
         {

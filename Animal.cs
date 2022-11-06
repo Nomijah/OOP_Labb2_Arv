@@ -68,7 +68,7 @@ namespace OOP_Labb2_Arv
 
         public void Pet()
         {
-            if (_nature.ToLower() == "calm")
+            if (_nature.ToLower() == "calm" || _nature.ToLower() == "tame")
             {
                 Console.WriteLine("You can pet this animal.");
             }

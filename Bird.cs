@@ -17,19 +17,24 @@ namespace OOP_Labb2_Arv
         {
             _canFly = canFly;
         }
-
-        public override void MakeSound()
-        {
-            Console.WriteLine("The bird chirps beautifully!");
-        }
         public override void PrintInfo()
         {
             Console.Write("The bird ");
             base.PrintInfo();
             if (_canFly)
+            {
                 Console.WriteLine("It can fly.");
+            }
             else
+            {
                 Console.WriteLine("It can't fly.");
+            }
+            Console.WriteLine();
+        }
+
+        public override void MakeSound()
+        {
+            Console.WriteLine("The bird chirps beautifully!");
         }
         public virtual void Fly()
         {

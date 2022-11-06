@@ -25,6 +25,7 @@ namespace OOP_Labb2_Arv
             Console.Write("The horse ");
             base.PrintInfo();
             Console.WriteLine($"This horse is a {_blood}");
+            Console.WriteLine();
         }
         public override void MakeSound()
         {
