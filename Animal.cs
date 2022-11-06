@@ -70,15 +70,15 @@ namespace OOP_Labb2_Arv
         {
             if (_nature.ToLower() == "calm" || _nature.ToLower() == "tame")
             {
-                Console.WriteLine("You can pet this animal.");
+                Console.WriteLine($"You can pet {_name}.");
             }
             else if (_nature.ToLower() == "aggressive")
             {
-                Console.WriteLine("Keep your distance!");
+                Console.WriteLine($"Keep your distance from {_name}!");
             }
             else
             {
-                Console.WriteLine("Pet at your own risk.");
+                Console.WriteLine($"Pet {_name} at your own risk.");
             }
         }
     }
